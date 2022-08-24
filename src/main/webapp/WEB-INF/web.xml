@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+
+    <servlet>
+        <servlet-name>descriptionServlet</servlet-name>
+        <servlet-class> com.example.mangastore.controller.ItemDescriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>descriptionServlet</servlet-name>
+        <url-pattern>/description-item</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>buyFilter</filter-name>
+        <filter-class>com.example.mangastore.filters.BuyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>buyFilter</filter-name>
+        <url-pattern>/success</url-pattern>
+    </filter-mapping>
+
+</web-app>
