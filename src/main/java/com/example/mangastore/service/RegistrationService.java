@@ -50,14 +50,14 @@ public class RegistrationService {
     }
 
     public boolean addCustomer(String firstName,String lastName,String email,String password,String phoneNumber,
-                               String city,String address, int houseNumber,int apartment){
+                               String city,String address, int houseNumber,int apartment){          // добавление нового клиента
 
         if(customerResource == null){
             customerResource = new CustomerResource();
         }
 
         try{
-            idCustomer = customerResource.loadCountCustomers();
+            idCustomer = customerResource.loadCountCustomers();         // подсчитываем кол-ко ID клиентов, уже существующих в БД
         }catch (ClassNotFoundException exception){
             exception.printStackTrace();
         }catch (SQLException exception){

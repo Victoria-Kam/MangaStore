@@ -4,6 +4,7 @@ import java.sql.*;
 
 public class OrderResource {
 
+    // добавление нового заказа клиента
     public void insertOrder(long idOrder, long idItem, double amount, long idCustomer, long cheque) throws ClassNotFoundException, SQLException {
 
         Class.forName("org.postgresql.Driver");
@@ -16,6 +17,7 @@ public class OrderResource {
     }
 
 
+    // поиск номера чека, чтобы он был уникальным
     public long findCheque(long cheque) throws ClassNotFoundException, SQLException {
 
         long localCheque = 0;
@@ -33,6 +35,7 @@ public class OrderResource {
         return localCheque;
     }
 
+    // поиск максимального ID, чтобы потом можно было добавлять новые ID записям
     public long findMaxId() throws ClassNotFoundException, SQLException {
 
         long localMax = 0;
@@ -40,7 +43,7 @@ public class OrderResource {
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);
         Statement statement = connection.createStatement();
-        String query = "select max(id) from products_orders where;";
+        String query = "select max(id) from products_orders;";
         ResultSet resultSet = statement.executeQuery(query);
         while (resultSet.next()){
             localMax = resultSet.getInt("max");

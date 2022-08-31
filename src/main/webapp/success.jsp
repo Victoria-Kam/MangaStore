@@ -42,12 +42,16 @@
     </div>
 </header>
 
+<p>Заказ успешно сформирован!</p>
+
+<form action="main" method="get">
+    <button> вернуться на главную страницу</button>
+</form>
 
 <div class="container">
     <footer class="py-3 my-4">
         <p class="text-center text-muted">© 2022 Test</p>
     </footer>
 </div>
-<p>wesrdtfyguhijok</p>
 </body>
 </html>

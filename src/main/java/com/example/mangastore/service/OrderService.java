@@ -43,6 +43,7 @@ public class OrderService {
         }
     }
 
+    // подсчет итоговой суммы стоимости товаров в заказе
     private double countAmount(ArrayList<Item> items) {
 
         double summ = 0.0;
@@ -53,32 +54,33 @@ public class OrderService {
         return summ;
     }
 
+    // поиск уникального номера для чека
     private long findNumberForCheque() {
         boolean isFind = false;
         long leftLimit = 1L;
-        long rightLimit = 10L;
+        long rightLimit = 10000L;
         long chequeNumber = 0;
         long result = 0;
 
-        Random random = new Random();
 
-        while (!isFind) {
-            chequeNumber = leftLimit + (long) (Math.random() * (rightLimit - leftLimit));
+        while (!isFind) {       // номер еще не найден
+            chequeNumber = leftLimit + (long) (Math.random() * (rightLimit - leftLimit));       // генерируем номер
             try {
-                result = orderResource.findCheque(chequeNumber);
+                result = orderResource.findCheque(chequeNumber);        // есть ли уже такой в БД
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-            if (result == 0) {
+            if (result == 0) {      // если такого неомера в БД нет, то нашли уникальный номер и выходим из цикла
                 isFind = true;
             }
         }
         return chequeNumber;
     }
 
-    private long findMaxId() {
+
+    private long findMaxId() {      // поиск максимального ID для таблицы, чтобы мы могли ++ для новых заказов
 
         long maxId = 0;
 
@@ -94,7 +96,7 @@ public class OrderService {
     }
 
 
-    public ArrayList<Order> loadOrders(long idCustomer){
+    public ArrayList<Order> loadOrders(long idCustomer){            // загрузка данны о заказе по ID клиеента
 
         try {
             orders =loadOrders.loadOrders(idCustomer);

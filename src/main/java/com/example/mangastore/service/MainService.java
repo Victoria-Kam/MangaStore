@@ -23,7 +23,7 @@ public class MainService {
         }
     }
 
-    public ArrayList<Item> loadData(){
+    public ArrayList<Item> loadData(){          // загрузка данных для главной страницы
 
         try{
             items = loadItems.load();

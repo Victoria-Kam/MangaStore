@@ -27,7 +27,6 @@ public class RegistrationServlet extends HttpServlet {
     private boolean isRegistrationNow;      // чтобы ошибка не появлялась на jsp сразу
 
     private RegistrationService registrationService;
-    private Customer customer;
 
     public void init() {
         if (registrationService == null) {
@@ -56,7 +55,9 @@ public class RegistrationServlet extends HttpServlet {
             isValid = false;
         } else {
 
-            if (registrationService.addCustomer(firstName,lastName,email,password,phoneNumber,city,address,houseNumber,apartment)){isValid = true;} // юда скинуть все поля владельца, потом получить сол-ко id записей, и сделать nsert into в БД
+            if (registrationService.addCustomer(firstName,lastName,email,password,phoneNumber,city,address,houseNumber,apartment)){
+                isValid = true;
+            }
         }
         doGet(request, response);
     }

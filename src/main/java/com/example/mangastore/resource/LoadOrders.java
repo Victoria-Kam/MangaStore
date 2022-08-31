@@ -16,7 +16,7 @@ public class LoadOrders {
         }
     }
 
-    public ArrayList<Order> loadOrders(long idCustomer) throws ClassNotFoundException, SQLException {
+    public ArrayList<Order> loadOrders(long idCustomer) throws ClassNotFoundException, SQLException {           // загрузка заказов
 
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);

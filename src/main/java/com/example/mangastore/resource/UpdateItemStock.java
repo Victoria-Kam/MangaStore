@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class UpdateItemStock {
 
+    // обновление информации о клоичестве товаров на складе
     public void updateItem(long idItem,int stock) throws ClassNotFoundException, SQLException {
 
         Class.forName("org.postgresql.Driver");

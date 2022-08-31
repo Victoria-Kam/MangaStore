@@ -1,0 +1,1 @@
+insert into customer values (1,'Petrov', 'Piter','hello@gmail.com','Qwerty1+2!',338795126,'Minsk','Nemiga',3,1);

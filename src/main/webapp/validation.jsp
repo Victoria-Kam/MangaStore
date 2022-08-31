@@ -34,7 +34,6 @@
                             </div>
                             <!-- Submit button -->
                             <div style="text-align: center;">
-                                <>
                                     <button type="submit" class="btn btn-primary btn-block mb-4">
                                         Enter
                                     </button>

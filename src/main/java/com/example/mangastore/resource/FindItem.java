@@ -8,7 +8,7 @@ public class FindItem {
 
     private Item item;
 
-    public Item searchItemByID(long idItem) throws ClassNotFoundException, SQLException {
+    public Item searchItemByID(long idItem) throws ClassNotFoundException, SQLException {           // поиск товара по ID
 
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);
@@ -21,8 +21,6 @@ public class FindItem {
                     resultSet.getDouble("price"),resultSet.getString("image"),resultSet.getInt("instock"));
         }
         connection.close();
-
-
         return item;
     }
 }

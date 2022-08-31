@@ -41,12 +41,20 @@
                             <div class="form-outline mb-4">
                                 <input type="text" id="password" class="form-control" name="password"/>
                                 <label class="form-label">password</label>
+                                <p><strong>Password must have:</strong></p>
+                                <ol>
+                                    <li>be more than 8 symbols</li>
+                                    <li>has a special characters like @#$%^&+=</li>
+                                    <li>has one large letter and one small letter</li>
+                                </ol>
+                                <p>example: Qwerty1+2!</p>
                             </div>
 
                             <!-- Номер -->
                             <div class="form-outline mb-4">
                                 <input type="text" id="phoneNumber" class="form-control" name="phoneNumber"/>
                                 <label class="form-label">Phone number</label>
+                                <p>9 symbols include code: 25/29/33/44</p>
                             </div>
 
                             <!-- Город -->

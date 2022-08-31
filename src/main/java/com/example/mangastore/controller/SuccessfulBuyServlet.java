@@ -16,15 +16,12 @@ import java.util.ArrayList;
 @WebServlet(name = "successfulBuyServlet", value = "/success")
 public class SuccessfulBuyServlet extends HttpServlet {
 
-    private ArrayList<Item> items;
     private HttpSession session;
     private Customer customer;
     private BuyService buyService;
 
     public void init(){
-        if (items == null) {
-            items = new ArrayList<>();
-        }if(buyService == null){
+        if(buyService == null){
             buyService = new BuyService();
         }
     }

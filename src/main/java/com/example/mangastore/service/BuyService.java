@@ -22,7 +22,7 @@ public class BuyService {
 
         for(Item item:items){
             try{
-                updateItemStock.updateItem(item.getIdItem(),item.getInStock());// покупка товаров (update items)
+                updateItemStock.updateItem(item.getIdItem(),item.getInStock());// отнимаем от кол-ва товаров на складе
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {

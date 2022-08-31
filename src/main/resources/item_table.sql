@@ -1,11 +1,13 @@
-create table item(
-                     iditem integer primary key,
-                     name varchar(50),
-                     publisher varchar(50),
-                     yearofpublication integer,
-                     pages integer,
-                     itemweight decimal,
-                     description varchar (150),
-                     price decimal,
-                     image varchar(255)
-)
+create table item
+(
+    iditem            integer not null
+        primary key,
+    title             varchar(50),
+    publisher         varchar(50),
+    yearofpublication integer,
+    pages             integer,
+    description       varchar(150),
+    price             numeric,
+    image             varchar(255),
+    instock           integer
+);

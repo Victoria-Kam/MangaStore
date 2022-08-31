@@ -10,7 +10,7 @@ public class ValidationService {
     private Customer customer;
     private CustomerResource customerResource;
 
-    public Customer findCustomer(String email, String password){
+    public Customer findCustomer(String email, String password){            // поиск клиента по почте и паролю для авторизации
 
         if(customerResource == null){
             customerResource = new CustomerResource();

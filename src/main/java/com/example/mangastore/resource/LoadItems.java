@@ -18,7 +18,7 @@ public class LoadItems {
         }
     }
 
-    public ArrayList<Item> load() throws ClassNotFoundException, SQLException {
+    public ArrayList<Item> load() throws ClassNotFoundException, SQLException {         // загрузка товаров
 
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);

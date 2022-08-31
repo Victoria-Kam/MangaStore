@@ -9,7 +9,7 @@ public class CustomerResource {
     private int countCustomers;
     private Customer customer;
 
-    public int loadCountCustomers() throws ClassNotFoundException, SQLException {
+    public int loadCountCustomers() throws ClassNotFoundException, SQLException {           // подсчет кол-во зарегистрированных клиентов (для установки ID новым клиентам )
 
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);
@@ -39,12 +39,12 @@ public class CustomerResource {
 
     }
 
-    public Customer findCustomer(String email, String password) throws SQLException, ClassNotFoundException {        // добавление новой записи в БД
+    public Customer findCustomer(String email, String password) throws SQLException, ClassNotFoundException {        // поиск клиента по почте и паролю
 
         Class.forName("org.postgresql.Driver");
         Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.NAME, DBConfig.PASSWORD);
         Statement statement = connection.createStatement();
-        String query = "select * from customer where email ='" + email + "';";
+        String query = "select * from customer where email ='" + email + "' AND pass = '"+password+"';";
         ResultSet resultSet = statement.executeQuery(query);
         while (resultSet.next()){
             customer = new Customer(resultSet.getInt("idcustomer"), resultSet.getString("firstname"),

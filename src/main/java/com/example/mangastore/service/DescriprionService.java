@@ -16,7 +16,7 @@ public class DescriprionService {
         }
     }
 
-    public Item descriptionItem(long idItem){
+    public Item descriptionItem(long idItem){           // поиск товара по ID для вывода его на экран
 
         try{
             item = findItem.searchItemByID(idItem);

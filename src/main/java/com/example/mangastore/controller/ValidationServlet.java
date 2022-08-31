@@ -24,17 +24,10 @@ public class ValidationServlet extends HttpServlet {
     private boolean isCustomerFind = false;
     private ValidationService validationService;
     private boolean isCustomerValidationNow = false;
-    private OrderService orderService;
-    private ArrayList<Order> orders;
 
     public void init() {
         if (validationService == null) {
             validationService = new ValidationService();
-        } if(orderService == null){
-            orderService = new OrderService();
-        }
-        if(orders == null){
-            orders = new ArrayList<>();
         }
     }
 
