@@ -20,23 +20,24 @@
 
                 <div class="card bg-glass">
                     <div class="card-body px-4 py-5 px-md-5">
-                        <form>
+                        <form action="validation" method="post">
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form3Example3" class="form-control" name="email"/>
-                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" id="emailValidation" class="form-control" name="email"/>
+                                <label class="form-label" for="emailValidation">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form3Example4" class="form-control" name="number"/>
-                                <label class="form-label" for="form3Example4">number</label>
+                                <input type="password" id="passwordValidation" class="form-control" name="password"/>
+                                <label class="form-label" for="passwordValidation">password</label>
                             </div>
                             <!-- Submit button -->
                             <div style="text-align: center;">
-                                <button type="submit" class="btn btn-primary btn-block mb-4">
-                                    Enter
-                                </button>
+                                <>
+                                    <button type="submit" class="btn btn-primary btn-block mb-4">
+                                        Enter
+                                    </button>
                             </div>
                         </form>
                         <div style="text-align: center;">

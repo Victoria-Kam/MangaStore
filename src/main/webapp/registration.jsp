@@ -18,18 +18,62 @@
 
                 <div class="card bg-glass">
                     <div class="card-body px-4 py-5 px-md-5">
-                        <form action="save-servlet" method="post">
-                            <!-- Email input -->
+                        <form action="registration" method="post">
+
                             <div class="form-outline mb-4">
-                                <input type="email" id="form3Example3" class="form-control" name="email"/>
-                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="text" id="firstName" class="form-control" name="firstName"/>
+                                <label class="form-label">First name</label>
                             </div>
 
-                            <!-- Password input -->
+                            <!-- Фамилия -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form3Example4" class="form-control" name="number"/>
-                                <label class="form-label" for="form3Example4">number</label>
+                                <input type="text" id="lastName" class="form-control" name="lastName"/>
+                                <label class="form-label">Last name</label>
                             </div>
+
+                            <!-- Имя -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" class="form-control" name="email"/>
+                                <label class="form-label">Email address</label>
+                            </div>
+
+                            <!-- Пароль -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="password" class="form-control" name="password"/>
+                                <label class="form-label">password</label>
+                            </div>
+
+                            <!-- Номер -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="phoneNumber" class="form-control" name="phoneNumber"/>
+                                <label class="form-label">Phone number</label>
+                            </div>
+
+                            <!-- Город -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="city" class="form-control" name="city"/>
+                                <label class="form-label">City</label>
+                            </div>
+
+                            <!-- Город -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="address" class="form-control" name="address"/>
+                                <label class="form-label">Address</label>
+                            </div>
+
+                            <!-- Номер дома -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="houseNumber" class="form-control" name="houseNumber"/>
+                                <label class="form-label">House number</label>
+                            </div>
+
+                            <!-- Квартира -->
+                            <div class="form-outline mb-4">
+                                <input type="text" id="apartment" class="form-control" name="apartment"/>
+                                <label class="form-label">Apartment</label>
+                            </div>
+
+
                             <!-- Submit button -->
                             <div style="text-align: center;">
                                 <button type="submit" class="btn btn-primary btn-block mb-4">

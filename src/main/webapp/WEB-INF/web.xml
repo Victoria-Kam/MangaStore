@@ -24,4 +24,24 @@
         <url-pattern>/success</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>mainFilter</filter-name>
+        <filter-class>com.example.mangastore.filters.MainFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>mainFilter</filter-name>
+        <url-pattern>/main</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>customerServlet</filter-name>
+        <filter-class>com.example.mangastore.filters.CustomerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>customerServlet</filter-name>
+        <url-pattern>/customer-account</url-pattern>
+    </filter-mapping>
+
+
 </web-app>

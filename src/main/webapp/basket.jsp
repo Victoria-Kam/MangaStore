@@ -43,25 +43,26 @@
 <div class="album py-5 bg-light">
     <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-            <core:forEach var="item" items="${items}">
-                <div class="col">
-                    <p style="text-align: center">${item.title}</p>
-                    <div class="card shadow-sm">
-                        <img src="${item.image}">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <core:forEach var="item" items="${items}">
+                    <div class="col">
+                        <p style="text-align: center">${item.title}</p>
+                        <div class="card shadow-sm">
+                            <img src="${item.image}">
 
-                        <div class="card-body">
-                            <p class="card-text">${item.description}</p>
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="card-body">
+                                <p class="card-text">${item.description}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </core:forEach>
-        </div>
+                </core:forEach>
+            </div>
         <form action="success" method="post">
             <button type="submit" class="btn btn-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square"
+                     viewBox="0 0 16 16">
                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
                 </svg>
                 Купить

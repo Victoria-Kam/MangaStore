@@ -1,7 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <head>
@@ -35,19 +33,36 @@
             <a href="#" class="navbar-brand d-flex align-items-center"
                style="background-color: rgba(55, 56, 55, 0.767);">
                 <form action="main" method="get">
-                <strong>MangaShop</strong>
+                    <strong>MangaShop</strong>
                 </form>
             </a>
         </div>
     </div>
 </header>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <div class="col">
+            <p style="text-align: center">Данные Покупателя</p>
+            <div class="card shadow-sm">
 
+                <div class="card-body">
+                    <p class="card-text">Фамилия: ${customer.firstName}</p>
+                    <p class="card-text">Имя: ${customer.lastName}</p>
+                    <p class="card-text">Почта: ${customer.email}</p>
+                    <p class="card-text">Телефон: ${customer.phone}</p>
+                    <p class="card-text">Город: ${customer.city}</p>
+                    <p class="card-text">Улица: ${customer.address}</p>
+                    <p class="card-text">Номер дома: ${customer.houseNumber}</p>
+                    <p class="card-text">Номер квартиры: ${customer.apartment}</p>
+                </div>
+            </div>
+        </div>
+    </core:forEach>
+</div>
 
 <div class="container">
     <footer class="py-3 my-4">
         <p class="text-center text-muted">© 2022 Test</p>
     </footer>
 </div>
-<p>wesrdtfyguhijok</p>
 </body>
 </html>

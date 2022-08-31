@@ -15,24 +15,16 @@ public class MainServlet extends HttpServlet {
 
 
     private ArrayList<Item> items;
-    private MainService mainService;
 
     public void init() {
-        if(items == null){
-            items = new ArrayList<>();
-        }
-        if(items.size() > 0){   // не помню зачем то писала, но думала что это что-то важное
-            items.clear();
-        }
-        if(mainService == null){
-            mainService = new MainService();
-        }
 
-        items = mainService.loadData();
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        HttpSession session = request.getSession();
+
+        items = (ArrayList<Item>) session.getAttribute("items");
         request.setAttribute("items",items);
         request.getRequestDispatcher("main-page.jsp").forward(request,response);
     }
