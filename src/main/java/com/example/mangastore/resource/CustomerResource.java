@@ -1,7 +1,6 @@
 package com.example.mangastore.resource;
 
 import com.example.mangastore.entity.Customer;
-import com.example.mangastore.entity.Item;
 
 import java.sql.*;
 

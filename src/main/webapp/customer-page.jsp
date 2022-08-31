@@ -1,5 +1,5 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <head>
@@ -40,24 +40,39 @@
     </div>
 </header>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-        <div class="col">
-            <p style="text-align: center">Данные Покупателя</p>
-            <div class="card shadow-sm">
+    <div class="col">
+        <p style="text-align: center">Данные Покупателя</p>
+        <div class="card shadow-sm">
 
-                <div class="card-body">
-                    <p class="card-text">Фамилия: ${customer.firstName}</p>
-                    <p class="card-text">Имя: ${customer.lastName}</p>
-                    <p class="card-text">Почта: ${customer.email}</p>
-                    <p class="card-text">Телефон: ${customer.phone}</p>
-                    <p class="card-text">Город: ${customer.city}</p>
-                    <p class="card-text">Улица: ${customer.address}</p>
-                    <p class="card-text">Номер дома: ${customer.houseNumber}</p>
-                    <p class="card-text">Номер квартиры: ${customer.apartment}</p>
-                </div>
+            <div class="card-body">
+                <p class="card-text">Фамилия: ${customer.firstName}</p>
+                <p class="card-text">Имя: ${customer.lastName}</p>
+                <p class="card-text">Почта: ${customer.email}</p>
+                <p class="card-text">Телефон: ${customer.phone}</p>
+                <p class="card-text">Город: ${customer.city}</p>
+                <p class="card-text">Улица: ${customer.address}</p>
+                <p class="card-text">Номер дома: ${customer.houseNumber}</p>
+                <p class="card-text">Номер квартиры: ${customer.apartment}</p>
             </div>
         </div>
+    </div>
+</div>
+
+
+<br>
+<div class="col">
+    <core:forEach var="order" items="${orders}">
+        <br>
+        <div class="card-body">
+            <p class="card-text">Номер чека: ${order.cheque}</p>
+            <p class="card-text">Название: ${order.title}</p>
+            <p class="card-text">Цена: ${order.price}</p>
+            <p class="card-text">Итоговая стоимость: ${order.amount}</p>
+        </div>
+        <br>
     </core:forEach>
 </div>
+
 
 <div class="container">
     <footer class="py-3 my-4">
